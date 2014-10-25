@@ -1,0 +1,11 @@
+var mymodule = require("./mymodule");
+
+mymodule(process.argv[2], process.argv[3], function(err,data){
+  if( !(data instanceof Array) ){
+    console.log(data);
+  } else {
+    for (var i=0; i<data.length; i++) {
+      console.log(data[i]);
+    }
+  }
+});
